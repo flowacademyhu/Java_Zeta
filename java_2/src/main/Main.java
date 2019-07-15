@@ -1,8 +1,13 @@
+package main;
+
+import csomag2.Test;
+
 public class Main {
 
     public static void main(String... args) {
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
+        Test t = new Test();
         double res = a / b;             //Ha két egész számot osztunk, az eredmény is egész, megoldás: valamelyik (vagy mindkettő) legyen double
 //           System.out.println(res);
         //   System.out.println(divide(a,b));
@@ -24,15 +29,24 @@ public class Main {
 //            System.out.println(fibo(i));
 //        }
 
-        Animal cica = new Animal("Cirmi", 10, true);        //Példányosítjuk
+        // Animal cica = new Animal("Cirmi", 10, true);        //Példányosítjuk
+        // Animal cica2 = new Animal("Cirmi", 10, true);
+/*
+        if (cica.equals(cica2)) {
+            System.out.println("Ugyanaz a cica");
+        }
+
         Animal kutya = new Animal("Bodri", 5, false);
-        System.out.println(cica.name);
-        System.out.println(cica.isMammal);
-        System.out.println(cica.age);
-        System.out.println(kutya.name);
+
+        //  cica.setName("NemCirmi");
+        System.out.println(cica.getName());
+        System.out.println(cica.isMammal());
+        System.out.println(cica.getAge());
+        System.out.println(kutya.getName());
         cica.sayHello();
         kutya.sayHello();
         System.out.println(cica);
+  */
     }
 
     public static double divide(int a, int b) {
