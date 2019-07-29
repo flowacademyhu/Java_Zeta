@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +71,12 @@ public class Main {
         }
 
 
-        Files.lines("asd.txt").forEachOrdered();
+        try {
+            Files.lines(new File("src/text.txt").toPath()).forEach(s -> {
+                System.out.println(s);
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
